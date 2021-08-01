@@ -40,7 +40,7 @@ arr.slice(1, 4) // returns arr[1], arr[2], and arr[3]
 
 
 // splice()
-// extracts a portion of an array specified by an index range
+// extracts a portion of an array specified by a start index and the number of elements to remove
 // optionally replace these elements with additional parameters
 arr.splice(1, 4, 'new_item_1', 'new_item_2');
 
