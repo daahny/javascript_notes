@@ -45,3 +45,6 @@ const helloTwo = (name) => {
 }
 
 
+
+// remember, this is a paramaterless function that returns 'Hello'
+const returnsHello = () => 'Hello';
