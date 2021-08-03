@@ -1,27 +1,43 @@
-// functions are first-class objects
-// they are like other objects, they have properties and methods
-// every function is a Function object
-
-// funct and funct_var both hold the address of the function. they refer to the same data
-function funct() {}
-let funct_var = funct;
-
-// invoking the function
-funct_var();
-funct();
-
-// properties
-let function_name = funct.name;
-let function_num_of_arguments = funct.length;
-
-// methods
-let function_string_of_source_code = funct.toString();
+// iterators are methods called on arrays to manipulate elements and return values.
+let fruits = ['banana', 'apple', 'orange', 'mango', 'kiwi'];
 
 
-// high-order functions
-// a function that accepts functions as parameters and/or returns a function
+// forEach()
+// accepts a call back function as an argument and executes the function for each item
+// syntax 1
+fruits.forEach(function(fruit) {console.log(fruit)});
+// syntax 2
+fruits.forEach(fruit => console.log(fruit));
+// syntax 3
+function print(element) {console.log(element)}
+fruits.forEach(print);
 
-// callback functions
-// functions that get passed as a parameter and are invoked
-// this is because they are called during the execution of a higher-order function
 
+// map()
+// returns a new array of elements that are changed by the action set in the callback function
+let fruitsNew = fruits.map(fruit => fruit.substring(0, 2));
+
+
+// filter()
+// returns a new array of elements that are filtered out of the original array according
+// to a condition in the callback function (true/false)
+let fruitsFiltered = fruits.filter(fruit => fruit.length < 6);
+
+
+// findIndex()
+// returns the index of the first element that matches a condition in the callback function
+let appleIndex = fruits.findIndex(fruit => fruit === 'apple');
+
+
+// reduce()
+// uses an accumulator (a continually increasing value) 
+// and a currentValue (the value of the element in the current iteration)
+// to return a single value 
+let nums = [1, 2, 4, 10, 13];
+let sum = nums.reduce((accumulator, currentValue) => accumulator + currentValue);
+let product = nums.reduce((accumulator, currentValue) => accumulator * currentValue);
+
+
+// some()
+// returns true or false depending on if a condition was met for any of the elements in the array
+let hasApple = fruits.some(fruit => fruit === 'apple');
