@@ -40,7 +40,7 @@ const gehrenheitValue = celsiusToFahrenheit(celsiusInput);
 let funct = () => null;
 export { funct };
 // Method 2:
-export let functi = () => null;
+export let funcky = () => null;
 
 // Note on CORS issue
 // Cross Origin Resource Sharing is a mechanism that allows restricted resources on a web page to be requested 
