@@ -1,0 +1,61 @@
+https://www.codecademy.com/articles/what-is-rest
+
+
+API - Application Programming Interface
+allow applications to communicate and use eachother without being concerned with implementation
+
+REST - REpresentational State Transfer
+REST is a set of architectual constraints imposed on an API.
+When a request is made, the API will transfer a repreesentation of the state of the requested resource
+to the requestor, typically via JSON.
+
+The following constraints must be imposed on an API for the API to be RESTful.
+    - A client-server arhcitecture managed through HTTP requests
+    - Stateless communication: no client info is saved, each request is separate
+    - Uniform interface between components so info is transferred in a standard way
+    - More here: https://www.redhat.com/en/topics/api/what-is-a-rest-api
+
+Thanks to REST:
+    - The client and server can be kept completely separate
+    - The client and server do not need to know about the state they are in.
+      This way, both the server and the client can understand any message received.
+
+A REST request
+The client makes the request to the server to perform a CRUD operation.
+    - HTTP verb
+    - a header
+    - path to resource
+    - optional message body containing data
+
+HTTP requests
+    GET — retrieve a specific resource (by id) or a collection of resources
+    POST — create a new resource
+    PUT — update a specific resource (by id)
+    DELETE — remove a specific resource by id
+
+Common Response Codes
+200 (OK)            response for successful HTTP request
+201 (CREATED)       response for HTTP request that resulted in the creation of something
+204 (NO CONTENT)    response for successfull HTTP request where nothing is returned in the body
+400 (BAD REQUEST)   resposne for bad HTTP requests due to bad syntax, excessive size, or some other error
+403 (FORBIDDEN)     response for clients that don't have access to the requested resource
+404 (NOT FOUND)     response for when a resource could not be found
+500 (INTERNAL SERVER ERROR)     response for when there is a generic failure and there is not specific information
+
+Accept parameter
+The Accept parameter in the http header communicates the type of content the client can receive.
+This is specified as a Multipurpose Internet Mail Extension (MIME) type
+
+MIME Types
+Usually used to specify content in the Accept parameter. consist of a type and a subtype: type/subtype
+    text/html
+    text/javascript
+    text/css
+    text/plain
+    image/png
+    video/mp4
+    
+Content-type parameter
+The responses will indicate a field in the content-type parameter as a MIME type.
+This indicates the type of content being returned.
+
