@@ -33,7 +33,7 @@ if (true) {
 if (false) { 
     // do something
 } 
-// falsy values: 0, empty strings ('' or ""), null, undefined, NoN (not a number)
+// falsy values: 0, empty strings ('' or ""), null, undefined, NaN (not a number)
 
 // short circuit evaluation
 // the second argument is executed or evaluated only if the first argument 

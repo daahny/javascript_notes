@@ -8,7 +8,7 @@ arr[0] = 'nah';
 
 // Arrays with let and const
 // Items of a const array are mutable. Items can be added and removed.
-// The const array cannot be assigned a new array or new value.
+// The const arr2 cannot be assigned a new array or new value.
 const arr2 = ['a', 'b', 'c'];
 arr2[2] = 'd';  // Legal
 
@@ -61,10 +61,16 @@ console.log(magic_arr.join(':'));
 // prints Earth:Fire:Water:Air
 
 
-// pass-by-reference: passing a variable by reference, allowing it to be mutated in a function
+// pass-by-reference: passing an array object by reference, allowing it to be mutated in a function
 // arr will be mutated
 const mutator = to_be_mutated => to_be_mutated.push('MUTATED');
 mutator(arr);
+
+// Note on pass-by-reference vs. pass-by-value
+// primitives (int, bool, string, undefined, & null) are passed by value
+// objects are passed by reference
+// === for values checks if the values are the same
+// === for references checks if the references point to the same address in memory
 
 
 // nested arrays

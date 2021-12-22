@@ -23,6 +23,7 @@
 // 2: Fulfilled - Operation completed and exits with a 'resolved value'
 // 3: Rejected - Operation failed and has a reason for failure
 
+
 // An asynchronous operation that has either been fulfilled or rejected is referred to as 'settled'
 
 // Making a Promise object
@@ -52,7 +53,7 @@ setTimeout(() => console.log('it has been atleast 3 seconds'), 3000);
 // .then() is a Promise method that determines the next action to take after the promise is settled
 // it takes 2 callback functions (called handlers)
 // the first handler is the success/onFulfilled handler for logic after a promise resolves
-// the other handler is the failure/onRejected handler for lagic after a promise rejects
+// the other handler is the failure/onRejected handler for logic after a promise rejects
 // if an appropriate handler is not provided, .then() will return a Promise with the same settled value it had when it was passed
 
 // Example
@@ -100,3 +101,19 @@ p1.then((resolvedValue) => {new Promise(exec)})
 // Achieve concurrency by accepting an array of promises to complete in no particular order
 // If every promise resolves, Promise.all() will resolve with an array containing the resolve value from each promise
 // If a single promise rejects, a single promise returns with the rejection reason
+
+
+// Another example of promise chaining
+let p2 = new Promise((resolve, reject) => {
+    console.log('executor function invoked!');
+    setTimeout(() => resolve(1), 1000);
+});
+
+p2.then((result) => {
+    console.log('success handler invoked!');
+    console.log('success handler invoked with the result \nof the previous promise! ' + result);
+    return result * 2;
+}).then((result) => {
+    console.log('second success handler invoked!')
+});
+

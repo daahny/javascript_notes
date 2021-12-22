@@ -18,9 +18,18 @@ const duck = {
     getName: () => console.log(this.dietType)
     // this getName() method will print undefined
     // this is because the this keyword references the global object when used in arrow functions
-    // the global object is an object that always exists in the global scope... it just does
     // don't use this keyword in arrow functions
 };
+// A global object is an object that always exists in the global scope.
+// In JavaScript, there's always a global object defined.
+// In a web browser, when scripts create global variables defined with the var keyword, 
+// they're created as members of the global object.
+// https://developer.mozilla.org/en-US/docs/Glossary/Global_object
+
+// Note, in browsers, the top-level scope is the global scope. 
+// This means that within the browser var something will define a new global variable. 
+// However, in Node.js this is different. The top-level scope is not the global scope; 
+// var something inside a Node.js module will be local to that module.
 
 
 // privacy
@@ -88,6 +97,7 @@ const tinCan2 = makeRobot2('j2g5H', 'Tim');
 
 
 // Destructered assignment
+// Will accept the lens property of the camera object
 const { lens } = camera;
 
 
@@ -118,7 +128,7 @@ console.log(target);
 
 
 console.log(Object.keys(target));
-// Array of [a, b, c, d, e];
+// Array of [a, b, c, d];
 
 
 console.log(Object.entries(target));
@@ -166,7 +176,7 @@ const menu = {
     },
     getRandomDishFromCourse(courseName) {
       let dishes = this._courses[courseName];
-      console.log(dishes)
+      console.log(dishes);
       let i = Math.floor(Math.random() * dishes.length);
       return dishes[i];
     },

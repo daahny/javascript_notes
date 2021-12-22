@@ -45,7 +45,7 @@ alienShip.syntax2();
 
 
 // pass-by-reference
-// objects are also passed by reference. meaning their will be multiple pointers to the same data
+// objects are also passed by reference. meaning there will be multiple pointers to the same data
 
 
 // for...in
@@ -73,9 +73,9 @@ for (let crewMember in crewMembers) {
     console.log(`crew member: ${crewMember}`);
     // the following will print undefined. 
     // the full object path must be specified since crewMember refers to a value of a single property
+    // full path:
     // console.log(`crew member name: ${crewMember.name}`);
     // console.log(`crew member relgion: ${crewMember.religion}`);
-    // full path:
     // by using bracket notation, we can refer to the variable obtained for the for...in
     // if we use dot notation, we would be referring to the crewMember property (which doesn't exist)
     console.log(`crew member name: ${crewMembers[crewMember].name}`);

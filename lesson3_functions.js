@@ -36,9 +36,9 @@ const doSomething = function(a, b, c) {
 // arrow functions
 // one statement, zero params.
 const helloZero = () => `Hello!`;
-// one statement. notice, for one parameter functions, the paranthesis are not required
+// one statement. notice, for one parameter functions, the parenthesis are not required
 const helloOne = name => `Hello ${name}!`;
-// more than one statement, parantehsis and brackets are required
+// more than one statement, parenthessis and brackets are required
 const helloTwo = (name) => {
     console.log(`Hello`);
     return `${name}!`;

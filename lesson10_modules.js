@@ -29,7 +29,7 @@ converters.celsiusToFahrenheit(100);
 // Import a specific function like so:
 const { celsiusToFahrenheit } = require('./converters.js');
 const celsiusInput = process.argv[2];
-const gehrenheitValue = celsiusToFahrenheit(celsiusInput);
+const fahrenheitValue = celsiusToFahrenheit(celsiusInput);
 
 
 
